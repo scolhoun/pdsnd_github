@@ -172,12 +172,13 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+    # display first 5 rows of trip data
     view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n').lower()
     start_loc = 0
     while view_data not in ['no']:
         print(df.iloc[start_loc:start_loc+5])
         start_loc += 5
+        # display next 5 rows of trip data
         view_display = input('Do you wish to continue?: ').lower()
         if view_display == 'no':
             break
