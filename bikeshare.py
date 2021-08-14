@@ -183,6 +183,7 @@ def user_stats(df):
             break
 
 def main():
+    """The order in which the above functions are run in."""
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
